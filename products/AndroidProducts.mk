@@ -130,3 +130,6 @@ endif
 ifeq (pa_zeus,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_zeus.mk
 endif
+ifeq (pa_zeusc,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_zeusc.mk
+endif

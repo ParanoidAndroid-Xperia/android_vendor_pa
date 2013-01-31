@@ -38,3 +38,4 @@ add_lunch_combo pa_tsubasa-userdebug
 add_lunch_combo pa_p990-userdebug
 add_lunch_combo pa_d710-userdebug
 add_lunch_combo pa_zeus-userdebug
+add_lunch_combo pa_zeusc-userdebug
