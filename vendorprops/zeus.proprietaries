@@ -1,8 +1,0 @@
-[
-    {
-        "account":      "garwedgess",
-        "repository":   "proprietary_vendor_semc",
-        "target_path":  "vendor/semc",
-        "revision":     "jellybean"
-    }
-]
