@@ -2,7 +2,7 @@
     {
         "account":      "CyanogenMod",
         "repository":   "android_device_semc_hallon",
-        "target_path":  "device/semc/haida",
+        "target_path":  "device/semc/hallon",
         "revision":     "jellybean"
     },
     {
