@@ -1,5 +1,6 @@
 add_lunch_combo pa_coconut-userdebug
 add_lunch_combo pa_mango-userdebug
+add_lunch_combo pa_phoenix-userdebug
 add_lunch_combo pa_satsuma-userdebug
 add_lunch_combo pa_smultron-userdebug
 add_lunch_combo pa_urushi-userdebug
