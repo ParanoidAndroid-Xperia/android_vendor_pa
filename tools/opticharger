@@ -90,7 +90,7 @@ fi
 if [ -e "$1" ];
 then
     NAME=`basename $1`;
-    echo $CL_CYN"Optimizing"$CL_RST" $NAME...";
+    echo $CL_CYN"Optimizing"$CL_YLW" $NAME...";$CL_RST
 
     if [ "$2" != "" ];
     then
@@ -118,7 +118,7 @@ then
         fi
     fi
 
-    [ $QUIET ] || echo $CL_YLW"Certificate:"$CL_RST" $CERT";
+    [ $QUIET ] || echo $LT_YLW"Certificate:"$CL_RST" $CERT";
 
     [ -d $TMPDIR/$NAME ] && rm -rf $TMPDIR/$NAME
     mkdir -p $TMPDIR/$NAME
@@ -132,10 +132,10 @@ then
     done
     cp $BASE/$1 $BASE/$1.old
 
-    [ $QUIET ] || echo $CL_GRN"Repacking apk.."$CL_RST
+    [ $QUIET ] || echo $LT_GRN"Repacking apk.."$CL_RST
     aapt p -0 .dat -0 .dict -F $NAME .
     
-    [ $QUIET ] || echo $CL_YLW"Resigning with cert: `echo $CERT`"$CL_RST
+    [ $QUIET ] || echo $LT_YLW"Resigning with cert: `echo $CERT`"$CL_RST
 
     [ $QUIET ] || echo java -jar $ANDROID_BUILD_TOP/out/host/$OUT_TARGET_HOST/framework/signapk.jar $ANDROID_BUILD_TOP/$CERT $ANDROID_BUILD_TOP/$KEY $NAME signed_$NAME
     java -jar $ANDROID_BUILD_TOP/out/host/$OUT_TARGET_HOST/framework/signapk.jar $ANDROID_BUILD_TOP/$CERT $ANDROID_BUILD_TOP/$KEY $NAME signed_$NAME

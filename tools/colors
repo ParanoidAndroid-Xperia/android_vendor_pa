@@ -7,5 +7,11 @@ if [ ! "$BUILD_WITH_COLORS" = "0" ]; then
     CL_BLU="\033[34m"
     CL_MAG="\033[35m"
     CL_CYN="\033[36m"
+    LT_RED="\033[1;31m"
+    LT_GRN="\033[1;32m"
+    LT_YLW="\033[1;33m"
+    LT_BLU="\033[1;34m"
+    LT_MAG="\033[1;35m"
+    LT_CYN="\033[1;36m"
     CL_RST="\033[0m"
 fi

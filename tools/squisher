@@ -42,7 +42,8 @@ QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
 
 REPACK=$OUT/repack.d
-echo $CL_MAG"Sanitizing environment..."$CL_RST
+echo
+echo $LT_YLW"Sanitizing environment..."$CL_RST
 rm -rf $REPACK
 mkdir -p $REPACK
 echo
@@ -52,7 +53,7 @@ echo
 mkdir $REPACK/ota
 (
 cd $REPACK/ota
-echo $CL_BLU"Unpacking $OTAPACKAGE..."$CL_RST
+echo $LT_BLU"Unpacking "$CL_BLU"$OTAPACKAGE..."$CL_RST
 unzip $QUIET $OTAPACKAGE
 echo
 cd $REPACK/ota/system/framework
@@ -106,7 +107,8 @@ fi
 ( cd $REPACK/ota/system/etc/paranoid; echo com.paranoid.preferences.version=$PAVERSION >> backup.conf; )
 
 # Copy ParanoidPreferences overlays
-echo $CL_MAG"Copying overlay preferences for $OVERLAYTARGET..."$CL_RST
+echo
+echo $LT_YLW"Copying overlay preferences for "$CL_MAG"$OVERLAYTARGET..."$CL_RST
 echo
 mkdir $REPACK/ota/system/etc/paranoid/preferences
 mkdir $REPACK/ota/system/etc/paranoid/preferences/images
@@ -124,7 +126,7 @@ java -Xmx1024m \
 	-w $SECURITYDIR/testkey.x509.pem $SECURITYDIR/testkey.pk8 \
 	$REPACK/update.zip $OUTFILE
 echo
-echo $CL_YLW"Cleaning up..."$CL_RST
+echo $LT_YLW"Cleaning up..."$CL_RST
 rm -rf $REPACK
 echo
 
@@ -134,7 +136,8 @@ img=`basename $OUTFILE`
 cd `dirname $OUTFILE`
 $MD5 $img >$img.md5sum
 echo
-echo $CL_BLU"Package complete: $OUTFILE"$CL_RST
+echo $LT_BLU"Package complete:"$CL_YLW" $OUTFILE"$CL_RST
+echo
 cat $img.md5sum
 echo
 )
