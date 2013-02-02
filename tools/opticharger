@@ -90,7 +90,7 @@ fi
 if [ -e "$1" ];
 then
     NAME=`basename $1`;
-    echo $CL_CYN"Optimizing"$CL_YLW" $NAME...";$CL_RST
+    echo $CL_CYN"Optimizing"$CL_RST" $NAME...";
 
     if [ "$2" != "" ];
     then
@@ -98,7 +98,7 @@ then
         KEY=build/target/product/security/$2.pk8
         if [ ! -f "$ANDROID_BUILD_TOP/$CERT" ];
         then
-            echo $CL_RED"$CERT does not exist!";$CL_RST
+            echo $CL_RED"$CERT does not exist!"$CL_RST;
             exit 1;
         fi
     else
@@ -106,7 +106,7 @@ then
         [ $QUIET ] || echo "APKINFO: $APKINFO";
         if [ "$APKINFO" = "" ];
         then
-            echo $CL_RED"No apk info for $NAME";$CL_RST
+            echo $CL_RED"No apk info for $NAME"$CL_RST;
             exit 1;
         fi
         CERT=`echo $APKINFO | awk {'print $2'} | cut -f 2 -d "=" | tr -d "\""`;
