@@ -12,6 +12,4 @@ $(call inherit-product, device/semc/coconut/cm.mk)
 
 PRODUCT_NAME := pa_coconut
 
-GET_VENDOR_PROPS := $(shell vendor/pa/tools/getvendorprops.py $(PRODUCT_NAME))
-
 endif

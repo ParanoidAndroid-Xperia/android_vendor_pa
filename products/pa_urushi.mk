@@ -12,6 +12,4 @@ $(call inherit-product, device/semc/urushi/cm.mk)
 
 PRODUCT_NAME := pa_urushi
 
-GET_VENDOR_PROPS := $(shell vendor/pa/tools/getvendorprops.py $(PRODUCT_NAME))
-
 endif

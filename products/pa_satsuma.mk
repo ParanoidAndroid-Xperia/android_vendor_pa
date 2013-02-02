@@ -12,6 +12,4 @@ $(call inherit-product, device/semc/satsuma/cm.mk)
 
 PRODUCT_NAME := pa_satsuma
 
-GET_VENDOR_PROPS := $(shell vendor/pa/tools/getvendorprops.py $(PRODUCT_NAME))
-
 endif

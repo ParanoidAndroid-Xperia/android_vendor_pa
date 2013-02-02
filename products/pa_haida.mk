@@ -12,6 +12,4 @@ $(call inherit-product, device/semc/haida/cm.mk)
 
 PRODUCT_NAME := pa_haida
 
-GET_VENDOR_PROPS := $(shell vendor/pa/tools/getvendorprops.py $(PRODUCT_NAME))
-
 endif
