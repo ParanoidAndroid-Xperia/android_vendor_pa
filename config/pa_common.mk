@@ -7,7 +7,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Replace CM files
 PRODUCT_COPY_FILES += \
     vendor/pa/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/pa/prebuilt/common/apk/GooManager.apk:system/app/GooManager.apk \
     vendor/pa/prebuilt/common/apk/SuperSU.apk:system/app/SuperSU.apk \
     vendor/pa/prebuilt/common/xbin/su:system/xbin/su
 
@@ -79,8 +78,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.pa.family=$(PA_CONF_SOURCE) \
   ro.pa.version=$(VERSION)-$(DEV_VERSION)
 
-PRODUCT_PROPERTY_OVERRIDES += \
-  ro.goo.developerid=paranoidandroid-xperia \
-  ro.goo.board=$(BOARD) \
-  ro.goo.rom=$(TARGET_PRODUCT)-$(DEV_ANDROID)-$(DEV_VERSION) \
-  ro.goo.version=$(shell date +%s)
