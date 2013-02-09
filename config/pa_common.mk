@@ -69,18 +69,18 @@ PA_VERSION_MAINTENANCE = 7.1
 
 TARGET_CUSTOM_RELEASETOOL := vendor/pa/tools/squisher
 
-WEDGESS_VERSION := wedgess
-WEDGESS_ANDROID := JB
+DEV_VERSION := ParanoidAndroid-Xperia
+DEV_ANDROID := JB
 VERSION := $(PA_VERSION_MAJOR).$(PA_VERSION_MINOR)$(PA_VERSION_MAINTENANCE)
-PA_VERSION := $(TARGET_PRODUCT)-$(VERSION)-$(shell date +%Y%m%d-%H%M%S)-$(WEDGESS_VERSION)
+PA_VERSION := $(TARGET_PRODUCT)-$(VERSION)-$(shell date +%Y%m%d-%H%M%S)-$(DEV_VERSION)
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.modversion=$(PA_VERSION) \
   ro.pa.family=$(PA_CONF_SOURCE) \
-  ro.pa.version=$(VERSION)-$(WEDGESS_VERSION)
+  ro.pa.version=$(VERSION)-$(DEV_VERSION)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.goo.developerid=wedgess \
+  ro.goo.developerid=paranoidandroid-xperia \
   ro.goo.board=$(BOARD) \
-  ro.goo.rom=$(TARGET_PRODUCT)-$(WEDGESS_ANDROID)-$(WEDGESS_VERSION) \
+  ro.goo.rom=$(TARGET_PRODUCT)-$(DEV_ANDROID)-$(DEV_VERSION) \
   ro.goo.version=$(shell date +%s)
