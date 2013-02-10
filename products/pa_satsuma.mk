@@ -1,6 +1,9 @@
 # Check for target product
 ifeq (pa_satsuma,$(TARGET_PRODUCT))
 
+# Define PA bootanimation size
+PARANOID_BOOTANIMATION_NAME := MDPI
+
 # OVERLAY_TARGET adds overlay asset source
 OVERLAY_TARGET := pa_mdpi
 
