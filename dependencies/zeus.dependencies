@@ -1,18 +1,18 @@
 [
     {
-        "account":      "garwedgess",
+        "account":      "ParanoidAndroid-Xperia",
         "repository":   "android_device_semc_zeus",
         "target_path":  "device/semc/zeus",
         "revision":     "jellybean"
     },
     {
-        "account":      "garwedgess",
+        "account":      "ParanoidAndroid-Xperia",
         "repository":   "android_device_semc_zeus-common",
         "target_path":  "device/semc/zeus-common",
         "revision":     "jellybean"
     },
     {
-        "account":      "garwedgess",
+        "account":      "ParanoidAndroid-Xperia",
         "repository":   "android_device_semc_msm7x30-common",
         "target_path":  "device/semc/msm7x30-common",
         "revision":     "jellybean"
@@ -24,7 +24,7 @@
         "revision":     "jellybean"
     },
     {
-        "account":      "garwedgess",
+        "account":      "TheMuppets",
         "repository":   "proprietary_vendor_semc",
         "target_path":  "vendor/semc",
         "revision":     "jellybean"
